@@ -17,7 +17,7 @@
 
 route::get('/','frontcontroller@index');
 
-Route::get('/reserve','reservecontroller@index');
+Route::get('/reserve/save','reservecontroller@index');
 
 Route::post('/contact','frontcontroller@store');
 

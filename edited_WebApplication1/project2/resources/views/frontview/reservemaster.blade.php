@@ -194,6 +194,72 @@
                                             <input name="phone" type ="text" class="form-control" required>
                                             
                                </div>
+                                          <!--form222222-->
+                            <div class="panel-heading">
+                            RESERVATION INFORMATION
+                        </div>
+                            <div class="form-group">
+                                            <label>Type Of Room *</label>
+                                            <select name="troom"  class="form-control" required>
+                                                <option value selected ></option>
+                                                <option value="Superior Room">SUPERIOR ROOM</option>
+                                                <option value="Deluxe Room">DELUXE ROOM</option>
+                                                <option value="Guest House">GUEST HOUSE</option>
+                                                <option value="Single Room">SINGLE ROOM</option>
+                                            </select>
+                              </div>
+                            
+                             <div class="form-group">
+                                            <label>Bedding Type</label>
+                                            <select name="bed" class="form-control" required>
+                                                <option value selected ></option>
+                                                <option value="Single">Single</option>
+                                                <option value="Double">Double</option>
+                                                <option value="Triple">Triple</option>
+                                                <option value="Quad">Quad</option>
+                                                <option value="None">None</option>
+                                                
+                                             
+                                            </select>
+                              </div>
+                              <div class="form-group">
+                                            <label>No.of Rooms *</label>
+                                            <select name="nroom" class="form-control" required>
+                                                <option value selected ></option>
+                                                <option value="1">1</option>
+                                              <!--  <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option> -->
+                                            </select>
+                              </div>
+                             
+                             
+                              <div class="form-group">
+                                            <label>Meal Plan</label>
+                                            <select name="meal" class="form-control"required>
+                                                <option value selected ></option>
+                                                <option value="Room only">Room only</option>
+                                                <option value="Breakfast">Breakfast</option>
+                                                <option value="Half Board">Half Board</option>
+                                                <option value="Full Board">Full Board</option>
+                                                
+                                                
+                                             
+                                            </select>
+                              </div>
+                              <div class="form-group">
+                                            <label>Check-In</label>
+                                            <input name="cin" type ="date" class="form-control">
+                                            
+                               </div>
+                               <div class="form-group">
+                                            <label>Check-Out</label>
+                                            <input name="cout" type ="date" class="form-control">
+                                            
+                               </div>
                                <input class="submit-btn" type="submit" value="SUBMIT"> 
 							   </form>
                         </div>
@@ -202,7 +268,7 @@
                 </div>
                 
                   
-            <div class="row">
+         <!--   <div class="row">
                 <div class="col-md-6 col-sm-6">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
@@ -239,12 +305,7 @@
                                             <select name="nroom" class="form-control" required>
 												<option value selected ></option>
                                                 <option value="1">1</option>
-                                              <!--  <option value="2">2</option>
-												<option value="3">3</option>
-												<option value="4">4</option>
-												<option value="5">5</option>
-												<option value="6">6</option>
-												<option value="7">7</option> -->
+                                            
                                             </select>
                               </div>
 							 
@@ -279,7 +340,7 @@
                     </div>
                 </div>
 				
-            </div>
+            </div>-->
            
               <!-- <div class = well method="Get" action="{{ URL('reservemodel')}}">
                 {{ csrf_field() }}
