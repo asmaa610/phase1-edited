@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class login extends Model
 {
      protected $fillable = [ 'usname', 'pass']; 
-    public $timestamps = false;
+     public $timestamps = false;
 }

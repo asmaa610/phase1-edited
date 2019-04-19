@@ -30,8 +30,10 @@ class reservecontroller extends Controller
     		'Meal' => $request->get('Meal'),
     		'cin' => $request->get('cin'),
     		'cout' => $request->get('cout'),
-         'stat' => $request->get('stat'),
-         'nodays' => $request->get('nodays'),
+            'Rent' => $request->get('Rent'),
+            'nodays' => $request->get('nodays'),
+
+
 ]);
     	       $reservemodel->save();
     	       return back();

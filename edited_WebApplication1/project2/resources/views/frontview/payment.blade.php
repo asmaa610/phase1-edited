@@ -90,42 +90,35 @@
                                             <th>Name</th>
 											<th>Room type</th>
                                             <th>Bed Type</th>
-                                            <th>Check in</th>
-											<th>Check out</th>
+                                            <th>Checkin</th>
+											<th>Checkout</th>
 											<th>No of Room</th>
 											<th>Meal Type</th>
 											
-                                            <th>Room Rent</th>
-											<th>Bed Rent</th>
-											<th>Meals </th>
-											<th>Gr.Total</th>
+                                            <th> Rent</th>
+											
 											<th>Print</th>
                                             
                                         </tr>
                                      
-                                     @foreach($users as $user)
+                                    @foreach($users as $user)
                                                <tr>
                                                     
 
-                                            <th>{{$user->[title]."".$user->[fname]}}</th>
-                                            <th>{{$user->}}Room type</th>
-                                            <th>Bed Type</th>
-                                            <th>Check in</th>
-                                            <th>Check out</th>
-                                            <th>No of Room</th>
-                                            <th>Meal Type</th>
+                                          <th>{{$user->FName}}</th>
+                                            <th>{{$user->TRoom}}</th>
+                                            <th>{{$user->Bed}}</th>
+                                            <th>{{$user->cin}}</th>
+                                            <th>{{$user->cout}}</th>
+                                            <th>{{$user->NRoom}}</th>
+                                            <th>{{$user->Meal}}</th>
                                             
-                                            <th>Room Rent</th>
-                                            <th>Bed Rent</th>
-                                            <th>Meals </th>
-                                            <th>Gr.Total</th>
-                                            <th>Print</th>
-                                                   
-                                                    
-                                                    
+                                            <th>{{$user->Rent}}</th>
+                                            <th><a href="3" > <button class='btn btn-primary'> <i class='fa fa-print' ></i> Print</button></th>
+
                                                </tr>
 
-                                       @endforeach
+                                       @endforeach 
                                 </table>
                             </div>
                             

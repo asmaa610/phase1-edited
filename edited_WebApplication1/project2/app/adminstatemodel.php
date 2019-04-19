@@ -4,9 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use App\reservemodel;
-class payment extends Model
+use DB;
+class adminstatemodel extends Model
 {
-	
-    protected $table = 'reservemodels';  
- 
+    protected  $table = 'reservemodels' ;
 }

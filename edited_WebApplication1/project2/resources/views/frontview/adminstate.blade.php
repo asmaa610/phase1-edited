@@ -98,7 +98,7 @@
                                         <h4 class="panel-title">
                                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
 											<button class="btn btn-default" type="button">
-												 New Room Bookings  <span class="badge"> 1 </span>
+												 New Room Bookings  <span class="badge"> 5 </span>
 											</button>
 											</a>
                                         </h4>
@@ -121,7 +121,7 @@
 											<th>Meal</th>
 											<th>Check In</th>
 											<th>Check Out</th>
-											<th> stat </th>
+											
                                             <th>noday</th>
 											
                                         </tr>
@@ -137,8 +137,7 @@
                                                     <th>{{$user -> Meal}}</th>
                                                     <th>{{$user -> cin}}</th>
                                                     <th>{{$user -> cout}}</th>
-                                                     <th>{{$user -> stat}}</th>
-                                                     <th>{{$user -> noday}}</th>
+                                                     <th>{{$user -> nodays}}</th>
 
 
                                                    
