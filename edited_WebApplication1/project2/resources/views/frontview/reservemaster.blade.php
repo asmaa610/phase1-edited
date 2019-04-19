@@ -21,7 +21,7 @@
 					</ul>
 
             </div>
-			<!-- -->
+
         </nav>
        
         <div id="page-wrapper" >
@@ -268,85 +268,54 @@
                 </div>
                 
                   
-         <!--   <div class="row">
-                <div class="col-md-6 col-sm-6">
-                    <div class="panel panel-primary">
+        
+
+           
+            <div class="col-md-4 col-sm-4">
+                    <div class="panel panel-default">
                         <div class="panel-heading">
-                            RESERVATION INFORMATION
+                           Available Room Details
                         </div>
                         <div class="panel-body">
-                            <form name="form" method="post" action="{{ URL('reservemodel')}}">
-                             {{ csrf_field() }}
-								<div class="form-group">
-                                            <label>Type Of Room *</label>
-                                            <select name="troom"  class="form-control" required>
-												<option value selected ></option>
-                                                <option value="Superior Room">SUPERIOR ROOM</option>
-                                                <option value="Deluxe Room">DELUXE ROOM</option>
-												<option value="Guest House">GUEST HOUSE</option>
-												<option value="Single Room">SINGLE ROOM</option>
-                                            </select>
-                              </div>
-							  <div class="form-group">
-                                            <label>Bedding Type</label>
-                                            <select name="bed" class="form-control" required>
-												<option value selected ></option>
-                                                <option value="Single">Single</option>
-                                                <option value="Double">Double</option>
-												<option value="Triple">Triple</option>
-                                                <option value="Quad">Quad</option>
-												<option value="None">None</option>
-                                                
-                                             
-                                            </select>
-                              </div>
-							  <div class="form-group">
-                                            <label>No.of Rooms *</label>
-                                            <select name="nroom" class="form-control" required>
-												<option value selected ></option>
-                                                <option value="1">1</option>
-                                            
-                                            </select>
-                              </div>
-							 
-							 
-							  <div class="form-group">
-                                            <label>Meal Plan</label>
-                                            <select name="meal" class="form-control"required>
-												<option value selected ></option>
-                                                <option value="Room only">Room only</option>
-                                                <option value="Breakfast">Breakfast</option>
-												<option value="Half Board">Half Board</option>
-												<option value="Full Board">Full Board</option>
-												
-                                                
-                                             
-                                            </select>
-                              </div>
-							  <div class="form-group">
-                                            <label>Check-In</label>
-                                            <input name="cin" type ="date" class="form-control">
-                                            
-                               </div>
-							   <div class="form-group">
-                                            <label>Check-Out</label>
-                                            <input name="cout" type ="date" class="form-control">
-                                            
-                               </div>
-                               <input class="submit-btn" type="submit" value="SUBMIT"> 
-                           </form>
-                       </div>
-                        
-                    </div>
-                </div>
-				
-            </div>-->
-           
-              <!-- <div class = well method="Get" action="{{ URL('reservemodel')}}">
-                {{ csrf_field() }}
-                <input class="submit-btn" type="submit" value="SUBMIT"> 
-                </div>-->
 
+                        <table width="200px">
+
+                        
+                                    <tr>
+                                        <td><b>Superior Room     </b></td>
+                                        <td><button type="button" class="btn btn-primary btn-circle"> 10 </button></td> 
+                                    </tr>
+                                    <tr>
+                                        <td><b>Guest House</b>   </td>
+                                        <td><button type="button" class="btn btn-primary btn-circle"> 5 </button></td> 
+                                    </tr>
+                                    <tr>
+                                        <td><b>Single Room   </b></td>
+                                        <td><button type="button" class="btn btn-primary btn-circle"> 4 </button></td> 
+                                    </tr>
+                                    <tr>
+                                        <td><b>Deluxe Room</b>   </td>
+                                        <td><button type="button" class="btn btn-primary btn-circle"> 3 </button></td> 
+                                    </tr>
+                                    <tr>
+                                        <td><b>Total Rooms  </b> </td>
+                                        <td> <button type="button" class="btn btn-danger btn-circle"> 23 </button></td> 
+                                    </tr>
+
+                            
+
+                        </table>
+                        
+                        
+                        
+                        
+                        
+                        </div>
+                        <div class="panel-footer">
+                            
+                        </div>
+                    </div>
+                    </div>
               
                     
             

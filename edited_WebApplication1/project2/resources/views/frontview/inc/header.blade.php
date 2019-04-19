@@ -5,6 +5,7 @@
 					<br>
 					<!--<a href="index.html"><img src="img/logo.png" alt="" class="img-responsive logo"></a> -->
                     <h1 CLASS="O">GRAND HOTEL</h1>
+                    <button><a href="{{ URL('/logIn')}}">LogIN</a></button>
 				</div>
 
 				<div class="col-md-7">

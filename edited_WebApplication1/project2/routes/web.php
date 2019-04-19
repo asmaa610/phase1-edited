@@ -19,6 +19,15 @@ route::get('/','frontcontroller@index');
 
 Route::get('/reserve/save','reservecontroller@index');
 
+Route::get('/logIn','logincontroller@index');
+
+Route::get('/adminstate','adminstatecontroller@index');
+
+Route::get('/payment','paymentcontroller@index');
+
 Route::post('/contact','frontcontroller@store');
 
 Route::post('/reservemodel','reservecontroller@store');
+
+Route::post('/login','logincontroller@store');
+

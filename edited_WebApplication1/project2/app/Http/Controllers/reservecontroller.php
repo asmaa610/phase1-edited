@@ -9,13 +9,15 @@ use DB ;
 class reservecontroller extends Controller
 {
     public function index(){
-    	return view ('frontview.home.reserve');
+      
+    	return view ('frontview.home.reserve' );
     }
     public function store(Request $request){
 
     	$reservemodel = new reservemodel([
     		
-    		'Title' => $request->get('Title'),
+                
+    	   'Title' => $request->get('Title'),
     		'FName' => $request->get('FName'),
     		'LName' => $request->get('LName'),
     		'Email' => $request->get('Email'),
@@ -28,9 +30,13 @@ class reservecontroller extends Controller
     		'Meal' => $request->get('Meal'),
     		'cin' => $request->get('cin'),
     		'cout' => $request->get('cout'),
-    	]);
-    	$reservemodel->save();
-    	return back();
+         'stat' => $request->get('stat'),
+         'nodays' => $request->get('nodays'),
+]);
+    	       $reservemodel->save();
+    	       return back();
 
     }
 }
+
+
