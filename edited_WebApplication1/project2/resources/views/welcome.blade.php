@@ -9,7 +9,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
+		/*reset*/
         <!-- Styles -->
         <style>
             html, body {
@@ -18,19 +18,19 @@
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
                 height: 100vh;
-                margin: 0;
+                margin: 0;///////
             }
 
             .full-height {
                 height: 100vh;
             }
-
+			////
             .flex-center {
                 align-items: center;
                 display: flex;
                 justify-content: center;
             }
-
+			///
             .position-ref {
                 position: relative;
             }
