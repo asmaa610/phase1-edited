@@ -87,6 +87,7 @@
                                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                    
                                         <tr>
+                                            <th>ID</th>
                                             <th>Name</th>
 											<th>Room type</th>
                                             <th>Bed Type</th>
@@ -104,8 +105,8 @@
                                     @foreach($users as $user)
                                                <tr>
                                                     
-
-                                          <th>{{$user->FName}}</th>
+                                            <th>{{$user->id}}</th>
+                                            <th>{{$user->FName}}</th>
                                             <th>{{$user->TRoom}}</th>
                                             <th>{{$user->Bed}}</th>
                                             <th>{{$user->cin}}</th>
@@ -114,8 +115,8 @@
                                             <th>{{$user->Meal}}</th>
                                             
                                             <th>{{$user->Rent}}</th>
-                                            <th><a href="3" > <button class='btn btn-primary'> <i class='fa fa-print' ></i> Print</button></th>
-
+                                            <th><a  href="{{ URL('/print')}}"  > <button class='btn btn-primary'> <i class='fa fa-print' ></i> Print</button></th>
+                         
                                                </tr>
 
                                        @endforeach 

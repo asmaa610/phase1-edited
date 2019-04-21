@@ -25,6 +25,9 @@ Route::get('/adminstate','adminstatecontroller@index');
 
 Route::get('/payment','paymentcontroller@index');
 
+Route::get('/print','printcontroller@index')->name("print");
+
+
 Route::post('/contact','frontcontroller@store');
 
 Route::post('/reservemodel','reservecontroller@store');

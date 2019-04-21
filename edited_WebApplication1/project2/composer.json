@@ -47,5 +47,9 @@
         "preferred-install": "dist",
         "sort-packages": true,
         "optimize-autoloader": true
+    },
+   "require": {
+        "laravelcollective/html": "^5.4"
     }
+
 }
