@@ -29,6 +29,9 @@ Route::get('/print','printcontroller@index')->name("print");
 
 Route::get('/profit','profitcontroller@index');
 
+Route::get('/usersetting','usersettingcontroller@index');
+
+
 Route::post('/contact','frontcontroller@store');
 
 Route::post('/reservemodel','reservecontroller@store');
