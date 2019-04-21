@@ -1,11 +1,13 @@
+ 
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Grand Hotel </title>
+    <title>Grand HOTEL</title>
 	
-    @yield('css_linss')
+    @yield('css_linksss')
 </head>
 <body>
     <div id="wrapper">
@@ -48,19 +50,19 @@
                     <li>
                         <a href="{{ URL('/adminstate')}}"><i class="fa fa-dashboard"></i> Status</a>
                     </li>
-                   
-					
+                    
                     <li>
-                        <a class="active-menu" href="{{ URL('/payment')}}"><i class="fa fa-qrcode"></i> Payment</a>
+                        <a  href="{{ URL('/payment')}}"><i class="fa fa-qrcode"></i> Payment</a>
                     </li>
-                    <li>
-                        <a  href="{{ URL('/profit')}}"><i class="fa fa-qrcode"></i> Profit</a>
-                    </li>
-                    <li>
-                        <a href="logout.php" ><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+					 <li>
+                        <a class="active-menu" href="{{ URL('/profit')}}"><i class="fa fa-qrcode"></i> Profit</a>
                     </li>
                     
+                    <li>
+                        <a href="#" ><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                    </li>
                 </ul>
+
                     
             </div>
 
@@ -71,7 +73,7 @@
 			 <div class="row">
                     <div class="col-md-12">
                         <h1 class="page-header">
-                           Payment Details<small> </small>
+                           Profit Details<small> </small>
                         </h1>
                     </div>
                 </div> 
@@ -79,47 +81,50 @@
 				 
 				 
             <div class="row">
+			
+				
+				
+
+				 
+				<br>
+				<br>
+				<br>
+				<br><div id="chart"></div>
                 <div class="col-md-12">
                     <!-- Advanced Tables -->
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <div class="table-responsive">
                                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
-                                   
+                                    
                                         <tr>
-                                            <th>ID</th>
+											<th>ID</th>
                                             <th>Name</th>
-											<th>Room type</th>
-                                            <th>Bed Type</th>
-                                            <th>Checkin</th>
-											<th>Checkout</th>
-											<th>No of Room</th>
-											<th>Meal Type</th>
-											
+                                            <th>Check in</th>
+											<th>Check out</th>
+                                            <th> NO of days </th>
                                             <th> Rent</th>
+											<th>Gr.Total</th>
+											<th>Profit</th>
 											
-											<th>Print</th>
                                             
                                         </tr>
-                                     
-                                    @foreach($users as $user)
-                                               <tr>
-                                                    
-                                            <th>{{$user->id}}</th>
-                                            <th>{{$user->FName}}</th>
-                                            <th>{{$user->TRoom}}</th>
-                                            <th>{{$user->Bed}}</th>
-                                            <th>{{$user->cin}}</th>
-                                            <th>{{$user->cout}}</th>
-                                            <th>{{$user->NRoom}}</th>
-                                            <th>{{$user->Meal}}</th>
-                                            
-                                            <th>{{$user->Rent}}</th>
-                                            <th><a  href="{{ URL('/print')}}"  > <button class='btn btn-primary'> <i class='fa fa-print' ></i> Print</button></th>
-                         
-                                               </tr>
+                                    @foreach($rows as $row)
 
-                                       @endforeach 
+                                        <tr>
+                                            <th>{{$row->id}}</th>
+                                            <th>{{$row->FName}}</th>
+                                            <th>{{$row->cin}}</th>
+                                            <th>{{$row->cout}}</th>
+                                            <th> {{$row->nodays}} </th>
+                                            <th> {{$row->Rent}} </th>
+                                            <th>{{$row->Rent}}</th>
+                                            <th><span data-prefix>$</span><span >15.45</span></th>
+                                            
+                                            
+                                        </tr>
+                                    @endforeach    
+                                   
                                 </table>
                             </div>
                             
@@ -142,21 +147,21 @@
      <!-- /. WRAPPER  -->
     <!-- JS Scripts-->
     <!-- jQuery Js -->
-    <script src="{{ asset('frontend') }}/assets/js2/jquery-1.10.2.js"></script>
+    <script src="{{asset('frontend')}}/assets/js2/jquery-1.10.2.js"></script>
       <!-- Bootstrap Js -->
-    <script src="{{ asset('frontend') }}/assets/js2/bootstrap.min.js"></script>
+    <script src="{{asset('frontend')}}/assets/js2/bootstrap.min.js"></script>
     <!-- Metis Menu Js -->
-    <script src="{{ asset('frontend') }}/assets/js2/jquery.metisMenu.js"></script>
+    <script src="{{asset('frontend')}}/assets/js2/jquery.metisMenu.js"></script>
      <!-- DATA TABLE SCRIPTS -->
-    <script src="{{ asset('frontend') }}/assets/js2/dataTables/jquery.dataTables.js"></script>
-    <script src="{{ asset('frontend') }}/assets/js2/dataTables/dataTables.bootstrap.js"></script>
+    <script src="{{asset('frontend')}}/assets/js2/dataTables/jquery.dataTables.js"></script>
+    <script src="{{asset('frontend')}}/assets/js2/dataTables/dataTables.bootstrap.js"></script>
         <script>
             $(document).ready(function () {
                 $('#dataTables-example').dataTable();
             });
     </script>
          <!-- Custom Js -->
-    <script src="{{ asset('frontend') }}/assets/js2/custom-scripts.js"></script>
+    <script src="{{asset('frontend')}}/assets/js2/custom-scripts.js"></script>
     
    
 </body>

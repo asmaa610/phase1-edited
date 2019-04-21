@@ -8,7 +8,7 @@
 		<script src="script.js"></script>
 		<style>
 		/* reset */
-		  
+
 *
 {
 	border: 0;

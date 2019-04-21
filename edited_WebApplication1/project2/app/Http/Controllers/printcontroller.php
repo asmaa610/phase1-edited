@@ -11,8 +11,8 @@ class printcontroller extends Controller
     public function index(){
            $rows =DB::table('reservemodels')
 			
-			->select('id','Title','FName','LName','Bed','Meal','cout','TRoom','nodays','Rent' )
-			->get() ;
+        			->select('id','Title','FName','LName','Bed','Meal','cout','TRoom','nodays','Rent' )
+        			->get() ;
          return view ('frontview.print')->with('rows' , $rows);
     	}
   /*  public function show($id = null){

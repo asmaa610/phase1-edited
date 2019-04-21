@@ -27,6 +27,7 @@ Route::get('/payment','paymentcontroller@index');
 
 Route::get('/print','printcontroller@index')->name("print");
 
+Route::get('/profit','profitcontroller@index');
 
 Route::post('/contact','frontcontroller@store');
 
