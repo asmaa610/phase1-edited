@@ -15,7 +15,7 @@ class roomcontroller extends Controller
 
     public function store(Request $request){
 
-    	$room = new room([
+    	    $room = new room([
     		
     		'type' => $request->get('type'),
     		'bedding' => $request->get('bedding'),

@@ -54,7 +54,7 @@
                         <a  class="active-menu" href="{{ URL('/room')}}"><i class="fa fa-plus-circle"></i>Add Room</a>
                     </li>
                     <li>
-                        <a  href="#"><i class="fa fa-desktop"></i> Delete Room</a>
+                        <a  href="{{ URL('/delete')}}"><i class="fa fa-desktop"></i> Delete Room</a>
                     </li>
 					
                 </ul>

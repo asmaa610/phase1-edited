@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grand HOTEL</title>
 	
-    @yield('css_linnkss')
+   @yield('css_liink')
 </head>
 <body>
     <div id="wrapper">
@@ -47,13 +47,13 @@
                 <ul class="nav" id="main-menu">
 
                     <li>
-                        <a class="active-menu" href="{{ URL('/setting')}}"><i class="fa fa-dashboard"></i>Room Status</a>
+                        <a  href="{{ URL('/setting')}}"><i class="fa fa-dashboard"></i>Room Status</a>
                     </li>
 					<li>
-                        <a  href="{{ URL('/room')}}"><i class="fa fa-plus-circle"></i>Add Room</a>
+                        <a   href="{{ URL('/room')}}"><i class="fa fa-plus-circle"></i>Add Room</a>
                     </li>
                     <li>
-                        <a   href="{{ URL('/delete')}}"><i class="fa fa-pencil-square-o"></i> Delete Room</a>
+                        <a  class="active-menu" href="{{ URL('/delete')}}"><i class="fa fa-pencil-square-o"></i> Delete Room</a>
                     </li>
 					
                 </ul>
@@ -63,47 +63,81 @@
         </nav>
         <!-- /. NAV SIDE  -->
        
+        
+              
         <div id="page-wrapper" >
             <div id="page-inner">
 			 <div class="row">
                     <div class="col-md-12">
                         <h1 class="page-header">
-                           Available <small> Rooms</small>
+                           DELETE ROOM <small></small>
                         </h1>
                     </div>
                 </div> 
                  
                                  
-            
-                <div class="row">
-				
-				    <div class="col-md-12">
-                    <!-- Advanced Tables -->
+            <div class="row">
+                
+                <div class="col-md-5 col-sm-5">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Delete room
+                        </div>
+                        <div class="panel-body">
+						<form name="form" method="post" action="{{ URL('room')}}">
+                            {{ csrf_field() }}
+                            {{ method_field('DELETE') }}
+                            <div class="form-group">
+                                            <label>Select the Room ID *</label>
+                                            <select name="troom"  class="form-control" required>
+                                           @foreach($users as $user)  
+												<option value selected > {{$user -> id}} </option>
+                                            @endforeach    
+                                            </select>
+                              </div>
+							  
+								
+							 <input type="submit" name="del" value="DELETE" class="btn btn-primary">  
+							</form>
+							<!-- add data to room tablr-->
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                  
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            ROOMS INFORMATION
+                        </div>
+                        <div class="panel-body">
+								<!-- Advanced Tables -->
                     <div class="panel panel-default">
+                       
                         <div class="panel-body">
                             <div class="table-responsive">
                                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
-                                    
+                                 
                                         <tr>
-                                            <th>ROOM ID</th>
-                                            <th>ROOM Type</th>
-                                            <th>Bedding</th>
-                                            
-                                            <th>Place</th>
-                                            
+                                            <th>Room ID</th>
+                                            <th>Room Type</th>
+											<th>Bedding</th>
                                             
                                         </tr>
-                                    
-                                          @foreach($users as $user)
+                                   
+                                        @foreach($users as $user)
                                                <tr>
                                                     <th>{{$user -> id}}</th>
                                                     <th>{{$user -> type}}</th>
                                                     <th>{{$user -> bedding}}</th>
-                                                    <th>{{$user -> place}}</th>
+                                                    
                                                
                                                </tr>
 
                                        @endforeach
+
                                 </table>
                             </div>
                             
@@ -111,24 +145,36 @@
                     </div>
                     <!--End Advanced Tables -->
                     
-                        </div>
-				
+                       
+                            
+							  
+							 
+							 
+							  
+							  
+							   
+                       </div>
+                        
+                    </div>
                 </div>
-                <!-- /. ROW  -->
                 
-                                
-                  
+               
+            </div>
+                    
             
+				
+					</div>
 			 <!-- /. PAGE INNER  -->
             </div>
          <!-- /. PAGE WRAPPER  -->
         </div>
+      
      <!-- /. WRAPPER  -->
-    </div>
+    
     <script src="{{asset('frontend')}}/assets/js2/jquery-1.10.2.js"></script>
       
     <script src="{{asset('frontend')}}/assets/js2/bootstrap.min.js"></script>
-   
+    
     <script src="{{asset('frontend')}}/assets/js2/jquery.metisMenu.js"></script>
      
     <script src="{{asset('frontend')}}/assets/js2/custom-scripts.js"></script>
