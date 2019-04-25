@@ -35,6 +35,8 @@ Route::get('/edit/{id}','usersettingcontroller@edit');
 
 Route::get('/setting','settingcontroller@index');
 
+Route::get('/room','roomcontroller@index');
+
 Route::post('/contact','frontcontroller@store');
 
 Route::post('/reservemodel','reservecontroller@store');
@@ -42,3 +44,5 @@ Route::post('/reservemodel','reservecontroller@store');
 Route::post('/login','logincontroller@store');
 
 Route::post('/update' , 'usersettingcontroller@update');
+
+Route::post('/room','roomcontroller@store');

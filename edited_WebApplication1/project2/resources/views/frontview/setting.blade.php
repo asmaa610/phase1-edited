@@ -47,10 +47,10 @@
                 <ul class="nav" id="main-menu">
 
                     <li>
-                        <a class="active-menu" href="#"><i class="fa fa-dashboard"></i>Room Status</a>
+                        <a class="active-menu" href="{{ URL('/setting')}}"><i class="fa fa-dashboard"></i>Room Status</a>
                     </li>
 					<li>
-                        <a  href="#"><i class="fa fa-plus-circle"></i>Add Room</a>
+                        <a  href="{{ URL('/room')}}"><i class="fa fa-plus-circle"></i>Add Room</a>
                     </li>
                     <li>
                         <a   href="#"><i class="fa fa-pencil-square-o"></i> Delete Room</a>
