@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grand HOTEL</title>
 	
-   @yield('css_linkkss')
-
+    @yield('css_linnkss')
 </head>
 <body>
-   
     <div id="wrapper">
         <nav class="navbar navbar-default top-navbar" role="navigation">
             <div class="navbar-header">
@@ -35,7 +32,7 @@
                         <li><a href="{{ URL('/setting')}}"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="logout.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
 					
@@ -50,13 +47,17 @@
                 <ul class="nav" id="main-menu">
 
                     <li>
-                        <a class="active-menu" href="{{ URL('/usersetting')}}"><i class="fa fa-dashboard"></i>User Dashboard</a>
+                        <a class="active-menu" href="#"><i class="fa fa-dashboard"></i>Room Status</a>
+                    </li>
+					<li>
+                        <a  href="#"><i class="fa fa-plus-circle"></i>Add Room</a>
+                    </li>
+                    <li>
+                        <a   href="#"><i class="fa fa-pencil-square-o"></i> Delete Room</a>
                     </li>
 					
                 </ul>
-
-              
-
+                    
             </div>
 
         </nav>
@@ -67,21 +68,16 @@
 			 <div class="row">
                     <div class="col-md-12">
                         <h1 class="page-header">
-                           ADMINISTRATOR<small> accounts </small>
+                           Available <small> Rooms</small>
                         </h1>
                     </div>
-                       <hr>
-     
-     {{Session::get('msg')}}
-
-    <hr>
                 </div> 
                  
                                  
-           
-                
-            <div class="row">
-                <div class="col-md-12">
+            
+                <div class="row">
+				
+				    <div class="col-md-12">
                     <!-- Advanced Tables -->
                     <div class="panel panel-default">
                         <div class="panel-body">
@@ -89,61 +85,52 @@
                                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                     
                                         <tr>
-                                            <th>User ID</th>
-											<th>User name</th>
-                                            <th>Password</th>
+                                            <th>ROOM ID</th>
+                                            <th>ROOM Type</th>
+                                            <th>Bedding</th>
                                             
-											<th>Update</th>
-											
+                                            <th>Place</th>
+                                            
                                             
                                         </tr>
                                     
-                                        @foreach($posts as $post)
-                                            <tr>
-                                          
-                                                <th>{{$post->id}}</th>
-    											<th>{{$post->usname}}</th>
-                                                <th>{{$post->pass}}</th>
-    									        <th><a href="{{URL('/edit/'.$post->id)}}"><button class='btn btn-primary btn' data-toggle='modal' data-target='#myModal'>
-    															 Update 
-    													</button></a></th>
-												
-                                            </tr>
-                                        @endforeach 
+                                          @foreach($users as $user)
+                                               <tr>
+                                                    <th>{{$user -> id}}</th>
+                                                    <th>{{$user -> type}}</th>
+                                                    <th>{{$user -> bedding}}</th>
+                                                    <th>{{$user -> place}}</th>
+                                               
+                                               </tr>
+
+                                       @endforeach
                                 </table>
                             </div>
                             
                         </div>
                     </div>
                     <!--End Advanced Tables -->
-					
+                    
                         </div>
-						
-						
 				
-                            </div>
-                        </div>
                 </div>
-            </div>
-               
                 <!-- /. ROW  -->
-               
+                
                                 
                   
             
 			 <!-- /. PAGE INNER  -->
             </div>
          <!-- /. PAGE WRAPPER  -->
-       
+        </div>
      <!-- /. WRAPPER  -->
-    <!-- JS Scripts-->
-    <!-- jQuery Js -->
+    </div>
     <script src="{{asset('frontend')}}/assets/js2/jquery-1.10.2.js"></script>
-      <!-- Bootstrap Js -->
+      
     <script src="{{asset('frontend')}}/assets/js2/bootstrap.min.js"></script>
-    <!-- Metis Menu Js -->
+   
     <script src="{{asset('frontend')}}/assets/js2/jquery.metisMenu.js"></script>
-      <!-- Custom Js -->
+     
     <script src="{{asset('frontend')}}/assets/js2/custom-scripts.js"></script>
     
    

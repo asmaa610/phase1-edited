@@ -31,6 +31,9 @@ Route::get('/profit','profitcontroller@index');
 
 Route::get('/usersetting','usersettingcontroller@index');
 
+Route::get('/edit/{id}','usersettingcontroller@edit');
+
+Route::get('/setting','settingcontroller@index');
 
 Route::post('/contact','frontcontroller@store');
 
@@ -38,3 +41,4 @@ Route::post('/reservemodel','reservecontroller@store');
 
 Route::post('/login','logincontroller@store');
 
+Route::post('/update' , 'usersettingcontroller@update');

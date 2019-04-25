@@ -15,4 +15,21 @@ class usersettingcontroller extends Controller
           ->get() ;
     	return view ('frontview.home.Usersetting' , compact('posts'));
     }
+
+    public function edit($id){
+                      
+
+                   $editbyid = login::where('id' , $id)->first();
+                   return view ('frontview.home.edit' , ['editbyid'=>$editbyid]);
+    }
+
+    public function update(Request $request){
+       $login = login::find($request->id);
+
+       /*$login->usname = $request->usname;
+       $login->pass = $request->pass;
+       $login->save();*/
+
+       return redirect('/usersetting')->with('msg' , 'login update successfully');
+    }
 }
