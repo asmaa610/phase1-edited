@@ -20,7 +20,7 @@
                 </button>
                 <a class="navbar-brand" href="{{ URL('/adminstate')}}"> ADMIN </a>
             </div>
-
+			\\\\
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
